@@ -2,7 +2,7 @@
 
 https://tecadmin.net/install-nodejs-with-nvm/
 
-2) Install Angular client tool
+2) **Install Angular client tool**
 
 npm install @angular/cli
 
