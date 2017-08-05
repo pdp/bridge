@@ -13,6 +13,10 @@ ng new bridge
 
 3) type 'ng serve' to start the project and keep it running in the browser
 
+4) install SASS css preprocessor and set sass as default
+npm install node-sass sass-loader raw-loader --save
+ng set defaults.styleExt scss
+
 
 UPDATING ANGULAR TO NEXT VERSION (in package.json you will see the updated versions)
 npm install @angular/common@latest @angular/compiler@latest @angular/compiler-cli@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/platform-server@latest @angular/router@latest @angular/animations@latest typescript@latest --save
