@@ -7,7 +7,7 @@ import { AppComponent } from './components/app/app.component';
 import {HeaderComponent} from './components/header/header.component';
 import {BannerComponent} from './components/banner/banner.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
-import {ContentSummaryComponent} from './components/content-summary/content-summary.component';
+import {HeadLineComponent} from './components/headline/headline.component';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import {ContentSummaryComponent} from './components/content-summary/content-summ
     HeaderComponent,
     BannerComponent,
     NavigationComponent,
-    ContentSummaryComponent
+    HeadLineComponent
   ],
   imports: [
     BrowserModule,

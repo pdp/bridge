@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ContentSummaryComponent } from './content-summary.component';
+import { HeadLineComponent } from './headline.component';
 
-describe('ContentSummaryComponent', () => {
-  let component: ContentSummaryComponent;
-  let fixture: ComponentFixture<ContentSummaryComponent>;
+describe('HeadLineComponent', () => {
+  let component: HeadLineComponent;
+  let fixture: ComponentFixture<HeadLineComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentSummaryComponent ]
+      declarations: [ HeadLineComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentSummaryComponent);
+    fixture = TestBed.createComponent(HeadLineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
