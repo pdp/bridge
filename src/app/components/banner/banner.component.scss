@@ -1,0 +1,14 @@
+@import '../../resources/styles/base';
+
+#banner {
+  width:100%;
+  background-color: #F5E0C1;
+  height: 220px;
+  margin-top:-40px;
+}
+
+#bannerText {
+  font-family: $font;
+  font-size: 3em;
+  color: $white;
+}
