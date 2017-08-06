@@ -1,6 +1,6 @@
 <article>
   <img class="headLineImage" [src]="headLineImageUrl" />
-  <header>{{headLine.title | uppercase}}</header>
+  <header class="headLineTitle">{{headLine.title | uppercase}}</header>
   <p *ngFor="let content of headLine.content">
     {{content}}
   </p>
