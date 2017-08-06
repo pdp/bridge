@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Headline, HEADLINES} from '../../domain/HeadLine';
+import {IMAGE_BASE_URL} from '../../common/constants';
 
 @Component({
   selector: 'app-headline',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadLineComponent implements OnInit {
 
-  constructor() { }
+  @Input() headLine: Headline;
+
+  headLineImageUrl: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
+    this.headLineImageUrl = IMAGE_BASE_URL + this.headLine.imageName;
   }
 
 }

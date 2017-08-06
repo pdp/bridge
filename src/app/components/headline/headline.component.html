@@ -1,6 +1,8 @@
-<div class="contentSummary">
-  <img src="../../harten_rood.png" />
-  <h1>NIEUWS</h1>
-  <p>Warme dagen vragen om koele drankjes. Tal van reclamespots trachten te verleiden met hippe frisdrank in alle geuren, kleuren en smaken. Veel van die drankjes zijn echter gesuikerd of synthetisch gezoet of ze bevatten bewaarmiddelen en kleurstoffen. Nochtans maak je in een wip je eigen zomerse verfrissingen..</p>
-  <a href="#">lees meer</a>
-</div>
+<article>
+  <img class="headLineImage" [src]="headLineImageUrl" />
+  <header>{{headLine.title | uppercase}}</header>
+  <p *ngFor="let content of headLine.content">
+    {{content}}
+  </p>
+  <footer><a>Lees meer ...</a></footer>
+</article>
