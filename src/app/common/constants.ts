@@ -1,1 +1,1 @@
-export const IMAGE_BASE_URL = 'app/resources/images/';
+export const IMAGE_BASE_URL = 'assets/resources/images/';
