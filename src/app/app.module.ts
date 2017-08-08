@@ -8,6 +8,10 @@ import {HeaderComponent} from './components/header/header.component';
 import {BannerComponent} from './components/banner/banner.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {HeadLineComponent} from './components/headline/headline.component';
+import {RouterModule} from '@angular/router';
+import {ScoreComponent} from './components/score/score.component';
+import {APP_ROUTES} from './common/Routes';
+import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 
 
 @NgModule({
@@ -16,13 +20,18 @@ import {HeadLineComponent} from './components/headline/headline.component';
     HeaderComponent,
     BannerComponent,
     NavigationComponent,
-    HeadLineComponent
+    HeadLineComponent,
+    ScoreComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
-  ],
+    HttpModule,
+    RouterModule.forRoot(
+        APP_ROUTES
+      )
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

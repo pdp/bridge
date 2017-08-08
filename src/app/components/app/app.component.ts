@@ -7,6 +7,5 @@ import {Headline, HEADLINES} from '../../domain/HeadLine';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
-  headLines: Headline [] = HEADLINES;
+
 }

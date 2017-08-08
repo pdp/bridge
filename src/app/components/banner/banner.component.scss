@@ -2,13 +2,15 @@
 
 #banner {
   width:100%;
-  background-color: #F5E0C1;
   height: 220px;
-  margin-top:-40px;
+  opacity: 0.6;
+  margin-top:1em;
+  background-color: lightblue;
 }
 
 #bannerText {
   font-family: $font;
-  font-size: 3em;
+  font-size: 5em;
+  font-weight: 800;
   color: $white;
 }

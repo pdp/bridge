@@ -1,12 +1,16 @@
 nav {
-  text-align: center;
+  text-align: right;
   margin-right: 5px;
   margin-top:20px;
 }
 
 nav > a:link,a:visited {
-  color: #BD9C7D;
   font-family: Arial;
   font-size: 1.2em;
-  margin-right: 10px;
+  margin-right: 1.5em;
+  text-decoration: none;
+}
+
+nav > a:link, a:visited, a:hover {
+  color: #206BA4;
 }
