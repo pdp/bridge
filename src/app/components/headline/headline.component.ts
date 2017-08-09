@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Headline, HEADLINES} from '../../domain/HeadLine';
-import {IMAGE_BASE_URL} from '../../common/constants';
+import {IMAGE_BASE_URL} from '../../common/Constants';
 
 @Component({
   selector: 'app-headline',
