@@ -17,6 +17,8 @@ ng new bridge
 npm install node-sass sass-loader raw-loader --save
 ng set defaults.styleExt scss
 
+5) install Bootstrap 4
+npm install bootstrap@4.0.0-alpha.4
 
 UPDATING ANGULAR TO NEXT VERSION (in package.json you will see the updated versions)
 npm install @angular/common@latest @angular/compiler@latest @angular/compiler-cli@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/platform-server@latest @angular/router@latest @angular/animations@latest typescript@latest --save
