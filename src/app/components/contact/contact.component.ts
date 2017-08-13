@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -11,18 +11,33 @@ export class ContactComponent {
   
   contactForm: FormGroup;
 
+  nameCtrl: FormControl;
+  emailCtrl: FormControl;
+  subjectCtrl: FormControl;
+  messageCtrl: FormControl;
+
   contactTitle:String = 'Contact persoon: Peter De Brombeer';
 
   constructor(private fb: FormBuilder) {
+    this.nameCtrl = fb.control('',Validators.required);
+    this.emailCtrl = fb.control('',[Validators.required, Validators.email]);
+    this.subjectCtrl = fb.control('',Validators.required);
+    this.messageCtrl = fb.control('',Validators.required);
+
     this.createForm();
    }
 
    createForm(){
      this.contactForm = this.fb.group({
-       name: ['', Validators.required],
-       email:['', Validators.required],
-       subject:['', Validators.required],
-       message:['', Validators.required]
+       name: this.nameCtrl,
+       email:this.emailCtrl,
+       subject:this.subjectCtrl,
+       message:this.messageCtrl
      })
    }
+
+  handle(){
+    console.log('handle action');
+    console.log(this.contactForm.value);
+  }
 }

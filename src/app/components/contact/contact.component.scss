@@ -1,1 +1,5 @@
 @import '../../../assets/resources/styles/base';
+
+ input.ng-invalid.ng-dirty,  textarea.ng-invalid.ng-dirty{
+    border: 1px red solid;
+  }
