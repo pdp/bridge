@@ -14,6 +14,7 @@ import {ScoreComponent} from './components/score/score.component';
 import {APP_ROUTES} from './common/Routes';
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ActivityComponent } from './components/activity/activity.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ContactComponent } from './components/contact/contact.component';
     HeadLineComponent,
     ScoreComponent,
     WelcomePageComponent,
-    ContactComponent
+    ContactComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
