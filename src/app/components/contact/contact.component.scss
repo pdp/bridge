@@ -1,5 +1,9 @@
 @import '../../../assets/resources/styles/base';
 
- input.ng-invalid.ng-dirty,  textarea.ng-invalid.ng-dirty{
+input#email.ng-invalid.ng-touched.ng-dirty{
     border: 1px red solid;
-  }
+}
+
+input#name.ng-invalid.ng-dirty, input#subject.ng-invalid.ng-dirty, textarea#message.ng-invalid.ng-dirty{
+    border: 1px red solid;
+}

@@ -20,11 +20,11 @@
        <p>Form status: {{ contactForm.status | json }}</p> -->
       </div>
 
-      <div class="form-group">
+      <div class="form-group" id="email-group">
         <label for="email">Email</label>
-        <input type="text" class="form-control" id="email" formControlName = "email">
+        <input type="email" class="form-control" id="email" formControlName = "email">
         <div *ngIf="emailCtrl.dirty && emailCtrl.hasError('required')">Email is een verplicht veld.</div>
-        <div *ngIf="emailCtrl.dirty && emailCtrl.hasError('email')">Email adres is niet in een correct formmaatqsdf.</div>
+        <div *ngIf="emailCtrl.touched && emailCtrl.dirty && emailCtrl.hasError('email')">Email adres is niet in een correct formaat.</div>
       </div>
 
      <div class="form-group">
@@ -34,9 +34,9 @@
       </div>
 
       <div class="form-group">
-        <label for="subject">Bericht</label>
+        <label for="message">Bericht</label>
         <textarea rows="10" class="form-control" id="message" formControlName="message"></textarea>
-        <div *ngIf="messageCtrl.dirty && messageCtrl.hasError('required')">Onderwerp is een verplicht veld.</div>
+        <div *ngIf="messageCtrl.dirty && messageCtrl.hasError('required')">Bericht is een verplicht veld.</div>
       </div>
 
       <button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary">Submit</button>
