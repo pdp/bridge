@@ -7,9 +7,11 @@ import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms'
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit{
   
   contactForm: FormGroup;
+
+  contactFormBuilder : FormBuilder;
 
   nameCtrl: FormControl;
   emailCtrl: FormControl;
@@ -18,13 +20,20 @@ export class ContactComponent {
 
   contactTitle:String = 'Contact persoon: Peter De Brombeer';
 
-  constructor(private fb: FormBuilder) {
-    this.nameCtrl = fb.control('',Validators.required);
-    this.emailCtrl = fb.control('',[Validators.required, Validators.email]);
-    this.subjectCtrl = fb.control('',Validators.required);
-    this.messageCtrl = fb.control('',Validators.required);
+  isInvalidEmail: Boolean = false;
+
+
+  ngOnInit(){
+    this.nameCtrl = this.contactFormBuilder.control('',Validators.required);
+    this.emailCtrl = this.contactFormBuilder.control('',[Validators.required, Validators.email]);
+    this.subjectCtrl = this.contactFormBuilder.control('',Validators.required);
+    this.messageCtrl = this.contactFormBuilder.control('',Validators.required);
 
     this.createForm();
+  }
+
+  constructor(private fb: FormBuilder){ 
+    this.contactFormBuilder = fb;    
    }
 
    createForm(){
@@ -39,5 +48,18 @@ export class ContactComponent {
   handle(){
     console.log('handle action');
     console.log(this.contactForm.value);
+  }
+
+  focusEmail(){
+    this.emailCtrl.setErrors(null);
+    this.isInvalidEmail = false;
+  }
+
+  verifyEmail(){
+    if (!this.emailCtrl.hasError('required') && (this.emailCtrl.hasError('email'))){      
+      this.isInvalidEmail = true;
+    }else{
+      this.isInvalidEmail = false;
+    }
   }
 }

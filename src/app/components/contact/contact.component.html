@@ -22,10 +22,10 @@
 
       <div class="form-group" id="email-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" formControlName = "email">
+        <input type="email" class="form-control" id="email" formControlName = "email" (blur)="verifyEmail()" (focus)="focusEmail()">
         <div *ngIf="emailCtrl.dirty && emailCtrl.hasError('required')">Email is een verplicht veld.</div>
-        <div *ngIf="emailCtrl.touched && emailCtrl.dirty && emailCtrl.hasError('email')">Email adres is niet in een correct formaat.</div>
-      </div>
+        <div *ngIf="isInvalidEmail">Email adres is niet in een correct formaat. </div>       
+      </div> 
 
      <div class="form-group">
         <label for="subject">onderwerp</label>
